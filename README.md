@@ -22,7 +22,19 @@ go run ./cmd/a2pcej -m ja -n Examples004
 go run ./cmd/a2pcej -m en -d ', ' -s '(CAPITAL)' Examples003
 ```
 
-Options match the Python CLI: `-m/--mode`, `-d/--delimiter`,
-`-nd/--nodelimiter`, `-s/--sign`, `-ns/--nosign`, and `-n/--num`.
+### Options
 
-Run tests with `go test ./...`.
+| Short | Long | Description |
+| --- | --- | --- |
+| `-m` | `--mode` | Conversion mode: `en` or `ja` (required) |
+| `-d` | `--delimiter` | Use a custom delimiter |
+| `-nd` | `--nodelimiter` | Use no delimiter |
+| `-s` | `--sign` | Use a custom uppercase sign |
+| `-ns` | `--nosign` | Use no uppercase sign |
+| `-n` | `--num` | Convert digits to phonetic names |
+
+## Testing
+
+```sh
+go test ./...
+```
